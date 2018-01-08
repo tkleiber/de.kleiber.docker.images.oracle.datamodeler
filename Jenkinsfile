@@ -9,7 +9,10 @@ pipeline {
     stage('Build Oracle SQL Developer Data Modeler Image') {
       steps {
         sh 'if [ ! -f $SW_FILE ]; then cp "$SW_DIR/$SW_FILE" $SW_FILE; fi'
-        sh 'sudo docker build --tag oracle/datamodeler:$SW_VERSION --build-arg SW_FILE=$SW_FILE .'
+        withCredentials([usernamePassword(credentialsId: 'store.docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+          sh '''docker login --username $USERNAME --password $PASSWORD
+docker build --tag oracle/datamodeler:$SW_VERSION --build-arg SW_FILE=$SW_FILE .'''
+        }
       }
     }
     stage('Push Docker Image to Local Registry') {
