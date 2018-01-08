@@ -26,8 +26,8 @@ pipeline {
     }
   }
   environment {
-    SW_VERSION = '17.3.0'
-    SW_FILE = 'datamodeler-17.3.0.261.1529-1.noarch.rpm'
+    SW_VERSION = '17.4.0'
+    SW_FILE = 'datamodeler-17.4.0.355.2121-1.noarch.rpm'
     SW_DIR = '/software/Oracle/SQL Developer Data Modeler'
   }
 }

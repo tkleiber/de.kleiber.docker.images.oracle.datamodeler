@@ -14,4 +14,4 @@ This is the repository for creating a Docker Image from where you can running SQ
 * Mouse hover the MobaXTerm XServer Icon to find the DISPLAY Variable and export this in the shell
 * Start SQL Developer via
     * export DISPLAY=&lt;X Server address>
-    * sudo docker run -ti --rm --name="datamodeler.17.3.0" -e DISPLAY -v $HOME/.Xauthority:/home/oracle/.Xauthority --net=host localhost:5000/oracle/datamodeler:17.3.0
+    * sudo docker run -ti --rm --name="datamodeler.17.4.0" -e DISPLAY -v $HOME/.Xauthority:/home/oracle/.Xauthority --net=host localhost:5000/oracle/datamodeler:17.4.0
