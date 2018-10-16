@@ -30,8 +30,8 @@ docker build --tag oracle/datamodeler:$SW_VERSION --build-arg SW_FILE=$SW_FILE .
     }
   }
   environment {
-    SW_VERSION = '18.1.0'
-    SW_FILE = 'datamodeler-18.1.0.082.1035-1.noarch.rpm'
+    SW_VERSION = '18.3.0'
+    SW_FILE = 'datamodeler-18.3.0.268.1156-1.noarch.rpm'
     SW_DIR = '/software/Oracle/SQL Developer Data Modeler'
   }
 }
